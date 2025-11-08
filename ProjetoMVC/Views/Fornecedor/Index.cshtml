@@ -1,0 +1,31 @@
+﻿@{
+	ViewData["Title"] = "Fornecedores";
+}
+@model IEnumerable<ProjetoMVC.Models.Fornecedor>
+
+	<div class="text-center">
+		<h1>CRUD de Fornecedores</h1>
+		<a href="/Fornecedor/Create">Cadastrar Fornecedor</a>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>NOME</th>
+				<th>CNPJ</th>
+				<th>TELEFONE</th>
+				<th>AÇÕES</th>
+			</tr>
+		@foreach(var fornecedor in Model)
+		{
+			<tr>
+				<td>@fornecedor.Id</td>
+				<td>@fornecedor.Nome</td>
+				<td>@fornecedor.Cnpj</td>
+				<td>@fornecedor.Telefone</td>
+				<td>
+					<a href="/Fornecedor/Edit/@fornecedor.Id">Editar</a>
+					<a href="/Fornecedor/Delete/@fornecedor.Id">Excluir</a>
+				</td>
+			</tr>
+		}
+		</table>
+	</div>

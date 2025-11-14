@@ -12,6 +12,7 @@
 				<th>NOME</th>
 				<th>CATEGORIA</th>
 				<th>PREÇO</th>
+				<th>FORNECEDOR</th>
 				<th>AÇÕES</th>
 			</tr>
 		@foreach(var produto in Model)
@@ -21,6 +22,7 @@
 				<td>@produto.Nome</td>
 				<td>@produto.Categoria</td>
 				<td>@produto.Preco</td>
+				<td>@produto.Fornecedor?.Nome</td>
 				<td>
 					<a href="/Produto/Edit/@produto.Id">Editar</a>
 					<a href="/Produto/Delete/@produto.Id">Excluir</a>

@@ -14,6 +14,8 @@
 			<input asp-for="Categoria" />
 			<label>PREÇO</label>
 			<input asp-for="Preco" />
-			<button type="submit">Salvar</button>
+		<label asp-for="FornecedorId" asp-items="ViewBag.FornecedorId"></label>
+		<select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId"></select>
+		<button type="submit">Salvar</button>
 		</form>
 	</div>

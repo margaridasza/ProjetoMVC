@@ -41,7 +41,7 @@ namespace ProjetoMVC.Controllers
         [HttpPost]
         public IActionResult Edit(Fornecedor fornecedor)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //Vai validar se todos os campos estão preenchidos
             {
                 _context.Fornecedores.Update(fornecedor);
                 _context.SaveChanges();

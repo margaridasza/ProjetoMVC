@@ -62,8 +62,8 @@ namespace ProjetoMVC.Controllers
                 ViewData["FornecedorId"] = new SelectList(
                     await _context.Fornecedores.ToListAsync(),
                     "Id", "Nome", produto.FornecedorId);
-                return View();
-            
+                return View(produto);// puxa o produto, associando  no select list o fornecedorId
+
         }
        /* public IActionResult Edit(int id)
         {

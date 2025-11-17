@@ -12,6 +12,7 @@
 				<th>NOME</th>
 				<th>CATEGORIA</th>
 				<th>PREÇO</th>
+				<th>DATA DE VENCIMENTO</th>
 				<th>FORNECEDOR</th>
 				<th>AÇÕES</th>
 			</tr>
@@ -22,6 +23,7 @@
 				<td>@produto.Nome</td>
 				<td>@produto.Categoria</td>
 				<td>@produto.Preco</td>
+				<td>@Html.DisplayFor(model=>produto.DataVencimento)</td>
 				<td>@produto.Fornecedor?.Nome</td>
 				<td>
 					<a href="/Produto/Edit/@produto.Id">Editar</a>
